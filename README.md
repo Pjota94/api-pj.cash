@@ -1,2 +1,2 @@
-# api-pj.cash
+# PJ.CASH
 API para aplicação de transferências
