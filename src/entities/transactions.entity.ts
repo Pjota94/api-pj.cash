@@ -1,0 +1,28 @@
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  CreateDateColumn,
+  ManyToOne,
+} from "typeorm";
+import Accounts from "./accounts.entity";
+
+@Entity("transactions")
+class Transactions {
+  @PrimaryGeneratedColumn("uuid")
+  id: string;
+
+  @Column({ type: "float" })
+  value: number;
+
+  @CreateDateColumn()
+  createdAt: Date;
+
+  @ManyToOne(() => Accounts)
+  debitedAccount: Accounts;
+
+  @ManyToOne(() => Accounts)
+  creditedAccount: Accounts;
+}
+
+export default Transactions;
