@@ -9,7 +9,7 @@ import createUserSerializer from "../../serializers/user.serializer";
 const createUserService = async (
   { username, password }: ICreateUser,
   account: Accounts
-) => {
+): Promise<User> => {
   const serializedPassword = await createUserSerializer.validate({ password });
   const userRepository = AppDataSource.getRepository(User);
 
