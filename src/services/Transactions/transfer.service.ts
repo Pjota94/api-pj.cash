@@ -4,6 +4,7 @@ import Transactions from "../../entities/transactions.entity";
 import User from "../../entities/users.entity";
 import AppError from "../../errors/appError";
 import { ITransfer } from "../../interfaces/transfer.interfaces";
+import { formatDate } from "../../utils/date";
 
 const transferService = async (
   { value }: ITransfer,
@@ -50,6 +51,7 @@ const transferService = async (
     value,
     debitedAccount: findUserCashOutUpdate?.accounts,
     creditedAccount: findUserCashInUpdate?.accounts,
+    createdAt: formatDate(),
   });
 
   await transactionsRepository.save(transfer);
