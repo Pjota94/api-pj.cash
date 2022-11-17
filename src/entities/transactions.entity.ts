@@ -1,10 +1,4 @@
-import {
-  Entity,
-  PrimaryGeneratedColumn,
-  Column,
-  CreateDateColumn,
-  ManyToOne,
-} from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
 import Accounts from "./accounts.entity";
 
 @Entity("transactions")
@@ -15,8 +9,8 @@ class Transactions {
   @Column({ type: "float" })
   value: number;
 
-  @CreateDateColumn()
-  createdAt: Date;
+  @Column()
+  createdAt: string;
 
   @ManyToOne(() => Accounts)
   debitedAccount: Accounts;
