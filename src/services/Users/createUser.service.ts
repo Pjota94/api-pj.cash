@@ -3,7 +3,7 @@ import Accounts from "../../entities/accounts.entity";
 import User from "../../entities/users.entity";
 import AppError from "../../errors/appError";
 import { ICreateUser } from "../../interfaces/users.interfaces";
-import { hash } from "bcrypt";
+import { hash } from "bcryptjs";
 import createUserSerializer from "../../serializers/user.serializer";
 
 const createUserService = async (
