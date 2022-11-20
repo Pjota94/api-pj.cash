@@ -1,3 +1,4 @@
+import { Exclude } from "class-transformer";
 import {
   Entity,
   PrimaryGeneratedColumn,
@@ -16,6 +17,7 @@ class User {
   username: string;
 
   @Column()
+  @Exclude()
   password: string;
 
   @OneToOne(() => Accounts, { eager: true })
