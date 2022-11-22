@@ -16,10 +16,6 @@ const historyTransactionsService = async (userId: string) => {
     creditedAccount: user?.accounts,
   });
 
-  if (debited.length == 0 && credited.length == 0) {
-    throw new AppError("no transactions");
-  }
-
   return { debited, credited };
 };
 
