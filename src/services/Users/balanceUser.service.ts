@@ -1,4 +1,4 @@
-import { AppDataSource } from "../../data-source";
+import AppDataSource from "../../data-source";
 import User from "../../entities/users.entity";
 
 const balanceUserService = async (user: string) => {
