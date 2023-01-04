@@ -1,4 +1,4 @@
-import AppDataSource from "../../data-source";
+import { AppDataSource } from "../../data-source";
 import Accounts from "../../entities/accounts.entity";
 
 const createAccountService = async () => {

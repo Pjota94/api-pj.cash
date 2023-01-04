@@ -17,8 +17,8 @@ const setDataSourceConfig = (): DataSourceOptions => {
     return {
       type: "postgres",
       url: process.env.DATABASE_URL,
-      entities: [entitiesPath],
-      migrations: [migrationsPath],
+      entities: ["src/entities/*.ts"],
+      migrations: ["src/migrations/*.ts"],
     };
   }
 
@@ -31,10 +31,10 @@ const setDataSourceConfig = (): DataSourceOptions => {
     database: process.env.POSTGRES_DB,
     synchronize: false,
     logging: true,
-    entities: [entitiesPath],
-    migrations: [migrationsPath],
+    entities: ["src/entities/*.ts"],
+    migrations: ["src/migrations/*.ts"],
   };
 };
 
 const dataSourceConfig = setDataSourceConfig();
-export default new DataSource(dataSourceConfig);
+export const AppDataSource = new DataSource(dataSourceConfig);
