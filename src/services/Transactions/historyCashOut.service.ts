@@ -11,6 +11,8 @@ const historyCashOutService = async (userId: string) => {
     debitedAccount: user?.accounts,
   });
 
+  console.log(history);
+
   return history;
 };
 
