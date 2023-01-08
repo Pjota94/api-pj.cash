@@ -1,5 +1,5 @@
 <h1 align="center">
-  Pj.Cash - API
+  Pj.Cash - API - https://receba.onrender.com
 </h1>
 
 ## TECNOLOGIAS
@@ -20,7 +20,7 @@
   Cadastrar Usuário
 </h2>
 
-`POST /users - FORMATO DA REQUISIÇÃO`
+`POST https://receba.onrender.com/users - FORMATO DA REQUISIÇÃO`
 
 ### Todas as chaves são obrigatórias
 
@@ -78,7 +78,7 @@
   Login
 </h2>
 
-`POST /login - FORMATO DA REQUISIÇÃO`
+`POST https://receba.onrender.com/login - FORMATO DA REQUISIÇÃO`
 
 - username: deve ser do tipo string.
 - password: deve ser do tipo string.
@@ -103,7 +103,7 @@
 
 ### Rotas que necessitam de autenticação
 
-`GET /users/profile - FORMATO DA REQUISIÇÃO`
+`GET https://receba.onrender.com/users/profile - FORMATO DA REQUISIÇÃO`
 
 <i>Mostra nome do usuário logado.</i>
 
@@ -123,7 +123,7 @@
 }
 ```
 
-`GET /users/balance - FORMATO DA REQUISIÇÃO`
+`GET https://receba.onrender.com/users/balance - FORMATO DA REQUISIÇÃO`
 
 <i>Mostra saldo do usuário logado.</i>
 
@@ -147,7 +147,7 @@
   Rota de Transferência
 </h1>
 
-`POST /tranfers/{username} - FORMATO DA REQUISIÇÃO`
+`POST https://receba.onrender.com/tranfers/{username} - FORMATO DA REQUISIÇÃO`
 
 ### Chave obrigatória
 
@@ -194,7 +194,7 @@
   Rotas de Histórico de Transferência
 </h1>
 
-`GET /tranfers/history - FORMATO DA REQUISIÇÃO`
+`GET https://receba.onrender.com/tranfers/history - FORMATO DA REQUISIÇÃO`
 
 <i>Mostra histórico de cash-in e cash-outs do usuário logado.</i>
 
@@ -224,7 +224,7 @@
 }
 ```
 
-`GET /tranfers/cashIn - FORMATO DA REQUISIÇÃO`
+`GET https://receba.onrender.com/tranfers/cashIn - FORMATO DA REQUISIÇÃO`
 
 <i>Mostra histórico de cash-in.</i>
 
@@ -240,7 +240,7 @@
 ]
 ```
 
-`GET /tranfers/cashOut - FORMATO DA REQUISIÇÃO`
+`GET https://receba.onrender.com/tranfers/cashOut - FORMATO DA REQUISIÇÃO`
 
 <i>Mostra histórico de cash-outs.</i>
 
